@@ -7,3 +7,6 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 
 
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/info.%d.log
