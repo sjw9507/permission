@@ -10,3 +10,6 @@ spring:
 logging:
   config: classpath:logback-spring.xml
   path: D:/info.%d.log
+
+server:
+  port: 8888
