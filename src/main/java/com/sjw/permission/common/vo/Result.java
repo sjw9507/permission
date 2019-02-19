@@ -12,13 +12,16 @@ import io.swagger.annotations.ApiModelProperty;
 public class Result<T> {
     @ApiModelProperty(value = "实际传输的数据")
     private T data;
+
     /**
      * total rows
      */
     @ApiModelProperty
     private Long total = 1L;
+
     @ApiModelProperty(required = true)
     private boolean success = true;
+
     @ApiModelProperty
     private String msg = "操作完成";
 

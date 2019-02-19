@@ -3,7 +3,6 @@ package com.sjw.permission.util;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.sjw.permission.exception.ParamException;
 import org.apache.commons.collections.MapUtils;
 
 import javax.validation.ConstraintViolation;
@@ -56,10 +55,10 @@ public class BeanValidator {
         }
     }
 
-    public static void check(Object param) throws ParamException {
-        Map<String, String> map = BeanValidator.validateObject(param);
-        if (MapUtils.isNotEmpty(map)) {
-            throw new ParamException(map.toString());
-        }
-    }
+//    public static void check(Object param) throws ParamException {
+//        Map<String, String> map = BeanValidator.validateObject(param);
+//        if (MapUtils.isNotEmpty(map)) {
+//            throw new ParamException(map.toString());
+//        }
+//    }
 }
