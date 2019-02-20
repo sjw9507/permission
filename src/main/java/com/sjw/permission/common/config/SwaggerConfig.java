@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 .groupName("API")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.sjw.permission.controller"))
-                .paths(PathSelectors.ant(ControllerUrls.CLIENT_API_URI+"/**"))
+                .paths(PathSelectors.ant("/**"))
                 .paths(PathSelectors.any())
                 .build()
 
