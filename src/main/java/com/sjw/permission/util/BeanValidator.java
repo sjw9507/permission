@@ -3,7 +3,6 @@ package com.sjw.permission.util;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import org.apache.commons.collections.MapUtils;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
@@ -11,6 +10,9 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import java.util.*;
 
+/**
+ * @author sjw
+ */
 public class BeanValidator {
 
     private static ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
