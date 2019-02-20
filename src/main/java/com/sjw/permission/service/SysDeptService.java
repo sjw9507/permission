@@ -11,6 +11,7 @@ import com.sjw.permission.dao.SysDeptMapper;
 import com.sjw.permission.dao.SysUserMapper;
 import com.sjw.permission.model.SysDept;
 import com.sjw.permission.param.DeptParam;
+import com.sjw.permission.util.BeanValidator;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,0 +1,53 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<properties resource="config.properties"/>-->
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
+        <plugin type="com.czh.ecom.common.util.plugin.HyMapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+
+            <property name="modelFieldEnum" value="true"/>
+        </plugin>
+
+        <!--<jdbcConnection driverClass="${jdbc.driverClass}"-->
+        <!--connectionURL="${jdbc.url}"-->
+        <!--userId="${jdbc.user}"-->
+        <!--password="${jdbc.password}">-->
+        <!--</jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost/quality?useSSL=false"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.czh.ecom.modules.quality.entity"
+                            targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.czh.ecom.modules.quality.mapper"
+                             targetProject="src/main/java"
+                             type="ANNOTATEDMAPPER"/>
+
+        <!--<table tableName="book">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+        <table tableName="quality_construction_brand" domainObjectName="QualityConstructionBrand" enableCountByExample="true"
+               enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"/>
+        <table tableName="quality_brand_model" domainObjectName="QualityBrandModel" enableCountByExample="true"
+               enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"/>
+
+    </context>
+</generatorConfiguration>
