@@ -9,19 +9,24 @@ import java.net.UnknownHostException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author sjw
+ */
+
 @Slf4j
 public class IpUtil {
 
-    public final static String ERROR_IP = "127.0.0.1";
+    private final static String ERROR_IP = "127.0.0.1";
 
-    public final static Pattern pattern = Pattern.
-            compile("(2[5][0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})");
+    private final static Pattern PATTERN = Pattern.compile("(2[5][0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})");
+
+    private final static String UNKNOWN = "unknown";
 
     /**
-     * 取外网IP
+     * get external network IP
      *
-     * @param request
-     * @return
+     * @param request request
+     * @return ip
      */
     public static String getRemoteIp(HttpServletRequest request) {
         String ip = request.getHeader("x-real-ip");
@@ -45,27 +50,27 @@ public class IpUtil {
     }
 
     /**
-     * 获取用户的真实ip
+     * get user's real IP
      *
-     * @param request
-     * @return
+     * @param request request
+     * @return ip
      */
     public static String getUserIP(HttpServletRequest request) {
 
         // 优先取X-Real-IP
         String ip = request.getHeader("X-Real-IP");
-        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+        if (ip == null || ip.length() == 0 || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getHeader("x-forwarded-for");
         }
 
-        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+        if (ip == null || ip.length() == 0 || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getRemoteAddr();
             if ("0:0:0:0:0:0:0:1".equals(ip)) {
                 ip = ERROR_IP;
             }
         }
 
-        if ("unknown".equalsIgnoreCase(ip)) {
+        if (UNKNOWN.equalsIgnoreCase(ip)) {
             ip = ERROR_IP;
             return ip;
         }
@@ -105,7 +110,7 @@ public class IpUtil {
             return false;
         }
 
-        Matcher matcher = pattern.matcher(ip);
+        Matcher matcher = PATTERN.matcher(ip);
         boolean isValid = matcher.matches();
         log.debug("valid ip:" + ip + " result is: " + isValid);
         return isValid;

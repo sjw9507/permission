@@ -8,6 +8,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.ser.impl.SimpleFilterProvider;
 import org.codehaus.jackson.type.TypeReference;
 
+/**
+ * @author sjw
+ */
+
 @Slf4j
 public class JsonMapper {
 
