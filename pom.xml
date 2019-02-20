@@ -110,6 +110,7 @@
             <version>1.9.13</version>
         </dependency>
 
+        <!-- commons -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -144,7 +145,6 @@
         </dependency>
 
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
