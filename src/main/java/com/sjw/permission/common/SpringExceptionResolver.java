@@ -1,7 +1,7 @@
 package com.sjw.permission.common;
 
-import com.sjw.permission.exception.ParamException;
-import com.sjw.permission.exception.PermissionException;
+import com.sjw.permission.modules.sys.exception.ParamException;
+import com.sjw.permission.modules.sys.exception.PermissionException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;

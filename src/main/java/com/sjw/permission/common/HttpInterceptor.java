@@ -1,6 +1,6 @@
 //package com.sjw.permission.common;
 //
-//import com.sjw.permission.util.JsonMapper;
+//import com.sjw.permission.modules.sys.util.JsonMapper;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;

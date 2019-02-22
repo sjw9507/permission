@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("API")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.sjw.permission.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.sjw.permission.modules.sys.controller"))
                 .paths(PathSelectors.ant("/**"))
                 .paths(PathSelectors.any())
                 .build()
