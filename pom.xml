@@ -189,7 +189,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <configurationFile>${basedir}/src/main/profiles/development/resources/generatorConfig.xml
+                    <configurationFile>src/main/resources/generatorConfig.xml
                     </configurationFile>
                     <overwrite>true</overwrite>
                     <verbose>true</verbose>
