@@ -1,7 +1,7 @@
 package com.sjw.permission.modules.sys.dto;
 
 import com.google.common.collect.Lists;
-import com.mmall.model.SysAclModule;
+import com.sjw.permission.modules.sys.model.SysAclModule;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

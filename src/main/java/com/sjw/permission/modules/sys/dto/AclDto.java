@@ -1,6 +1,6 @@
 package com.sjw.permission.modules.sys.dto;
 
-import com.mmall.model.SysAcl;
+import com.sjw.permission.modules.sys.model.SysAcl;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

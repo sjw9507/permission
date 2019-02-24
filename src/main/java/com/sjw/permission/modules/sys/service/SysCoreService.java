@@ -1,15 +1,14 @@
 package com.sjw.permission.modules.sys.service;
 
 import com.google.common.collect.Lists;
-import com.mmall.beans.CacheKeyConstants;
-import com.mmall.common.RequestHolder;
-import com.mmall.dao.SysAclMapper;
-import com.mmall.dao.SysRoleAclMapper;
-import com.mmall.dao.SysRoleUserMapper;
-import com.mmall.model.SysAcl;
-import com.mmall.model.SysUser;
-import com.mmall.util.JsonMapper;
+import com.sjw.permission.common.RequestHolder;
+import com.sjw.permission.modules.sys.beans.CacheKeyConstants;
 import com.sjw.permission.modules.sys.dao.SysAclMapper;
+import com.sjw.permission.modules.sys.dao.SysRoleAclMapper;
+import com.sjw.permission.modules.sys.dao.SysRoleUserMapper;
+import com.sjw.permission.modules.sys.model.SysAcl;
+import com.sjw.permission.modules.sys.model.SysUser;
+import com.sjw.permission.modules.sys.util.JsonMapper;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.type.TypeReference;

@@ -1,9 +1,9 @@
 package com.sjw.permission.modules.sys.dao;
 
-import com.mmall.beans.PageQuery;
-import com.mmall.dto.SearchLogDto;
-import com.mmall.model.SysLog;
-import com.mmall.model.SysLogWithBLOBs;
+import com.sjw.permission.modules.sys.beans.PageQuery;
+import com.sjw.permission.modules.sys.dto.SearchLogDto;
+import com.sjw.permission.modules.sys.model.SysLog;
+import com.sjw.permission.modules.sys.model.SysLogWithBLOBs;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

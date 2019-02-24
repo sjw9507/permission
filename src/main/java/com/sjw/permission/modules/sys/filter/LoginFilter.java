@@ -1,7 +1,7 @@
 package com.sjw.permission.modules.sys.filter;
 
-import com.mmall.common.RequestHolder;
-import com.mmall.model.SysUser;
+import com.sjw.permission.common.RequestHolder;
+import com.sjw.permission.modules.sys.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
@@ -16,6 +16,7 @@ public class LoginFilter implements Filter {
 
     }
 
+    @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
@@ -32,6 +33,7 @@ public class LoginFilter implements Filter {
         return;
     }
 
+    @Override
     public void destroy() {
 
     }

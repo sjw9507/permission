@@ -1,17 +1,17 @@
 package com.sjw.permission.modules.sys.service;
 
 import com.google.common.base.Preconditions;
-import com.mmall.beans.PageQuery;
-import com.mmall.beans.PageResult;
-import com.mmall.common.RequestHolder;
-import com.mmall.dao.SysUserMapper;
-import com.mmall.exception.ParamException;
-import com.mmall.model.SysUser;
-import com.mmall.param.UserParam;
-import com.mmall.util.BeanValidator;
-import com.mmall.util.IpUtil;
-import com.mmall.util.MD5Util;
-import com.mmall.util.PasswordUtil;
+import com.sjw.permission.common.RequestHolder;
+import com.sjw.permission.modules.sys.beans.PageQuery;
+import com.sjw.permission.modules.sys.beans.PageResult;
+import com.sjw.permission.modules.sys.dao.SysUserMapper;
+import com.sjw.permission.modules.sys.exception.ParamException;
+import com.sjw.permission.modules.sys.model.SysUser;
+import com.sjw.permission.modules.sys.param.UserParam;
+import com.sjw.permission.modules.sys.util.BeanValidator;
+import com.sjw.permission.modules.sys.util.IpUtil;
+import com.sjw.permission.modules.sys.util.MD5Util;
+import com.sjw.permission.modules.sys.util.PasswordUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

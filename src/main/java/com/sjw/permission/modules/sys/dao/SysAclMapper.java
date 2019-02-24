@@ -1,7 +1,7 @@
 package com.sjw.permission.modules.sys.dao;
 
-import com.mmall.beans.PageQuery;
-import com.mmall.model.SysAcl;
+import com.sjw.permission.modules.sys.beans.PageQuery;
+import com.sjw.permission.modules.sys.model.SysAcl;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

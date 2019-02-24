@@ -1,6 +1,6 @@
 package com.sjw.permission.modules.sys.dao;
 
-import com.mmall.model.SysRoleUser;
+import com.sjw.permission.modules.sys.model.SysRoleUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

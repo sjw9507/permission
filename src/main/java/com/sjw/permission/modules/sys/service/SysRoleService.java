@@ -2,17 +2,17 @@ package com.sjw.permission.modules.sys.service;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import com.mmall.common.RequestHolder;
-import com.mmall.dao.SysRoleAclMapper;
-import com.mmall.dao.SysRoleMapper;
-import com.mmall.dao.SysRoleUserMapper;
-import com.mmall.dao.SysUserMapper;
-import com.mmall.exception.ParamException;
-import com.mmall.model.SysRole;
-import com.mmall.model.SysUser;
-import com.mmall.param.RoleParam;
-import com.mmall.util.BeanValidator;
-import com.mmall.util.IpUtil;
+import com.sjw.permission.common.RequestHolder;
+import com.sjw.permission.modules.sys.dao.SysRoleAclMapper;
+import com.sjw.permission.modules.sys.dao.SysRoleMapper;
+import com.sjw.permission.modules.sys.dao.SysRoleUserMapper;
+import com.sjw.permission.modules.sys.dao.SysUserMapper;
+import com.sjw.permission.modules.sys.exception.ParamException;
+import com.sjw.permission.modules.sys.model.SysRole;
+import com.sjw.permission.modules.sys.model.SysUser;
+import com.sjw.permission.modules.sys.param.RoleParam;
+import com.sjw.permission.modules.sys.util.BeanValidator;
+import com.sjw.permission.modules.sys.util.IpUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 

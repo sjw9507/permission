@@ -1,15 +1,15 @@
 package com.sjw.permission.modules.sys.service;
 
 import com.google.common.base.Preconditions;
-import com.mmall.common.RequestHolder;
-import com.mmall.dao.SysAclMapper;
-import com.mmall.dao.SysAclModuleMapper;
-import com.mmall.exception.ParamException;
-import com.mmall.model.SysAclModule;
-import com.mmall.param.AclModuleParam;
-import com.mmall.util.BeanValidator;
-import com.mmall.util.IpUtil;
-import com.mmall.util.LevelUtil;
+import com.sjw.permission.common.RequestHolder;
+import com.sjw.permission.modules.sys.dao.SysAclMapper;
+import com.sjw.permission.modules.sys.dao.SysAclModuleMapper;
+import com.sjw.permission.modules.sys.exception.ParamException;
+import com.sjw.permission.modules.sys.model.SysAclModule;
+import com.sjw.permission.modules.sys.param.AclModuleParam;
+import com.sjw.permission.modules.sys.util.BeanValidator;
+import com.sjw.permission.modules.sys.util.IpUtil;
+import com.sjw.permission.modules.sys.util.LevelUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

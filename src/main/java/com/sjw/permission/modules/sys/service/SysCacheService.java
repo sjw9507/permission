@@ -1,8 +1,8 @@
 package com.sjw.permission.modules.sys.service;
 
 import com.google.common.base.Joiner;
-import com.mmall.beans.CacheKeyConstants;
-import com.mmall.util.JsonMapper;
+import com.sjw.permission.modules.sys.beans.CacheKeyConstants;
+import com.sjw.permission.modules.sys.util.JsonMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.ShardedJedis;

@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>部门管理</title>
-    <jsp:include page="/common/backend_common.jsp"/>
-    <jsp:include page="/common/page.jsp"/>
+    <jsp:include page="../common/backend_common.jsp"/>
+    <jsp:include page="../common/page.jsp"/>
 </head>
 <body class="no-skin" youdao="bind" style="background: white">
 <input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5"/>
@@ -534,6 +534,9 @@
         }
 
         function updateDept(isCreate, successCallback, failCallback) {
+            if (isCreate) {
+                $("#deptId").val(null);
+            }
             $.ajax({
                 url: isCreate ? "/sys/dept/save.json" : "/sys/dept/update.json",
                 data: $("#deptForm").serializeArray(),
