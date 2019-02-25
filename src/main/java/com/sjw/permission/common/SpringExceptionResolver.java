@@ -3,6 +3,7 @@ package com.sjw.permission.common;
 import com.sjw.permission.modules.sys.exception.ParamException;
 import com.sjw.permission.modules.sys.exception.PermissionException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
+@Configuration
 public class SpringExceptionResolver implements HandlerExceptionResolver {
     private static final String END_JSON = ".json";
     private static final String END_PAGE = ".page";

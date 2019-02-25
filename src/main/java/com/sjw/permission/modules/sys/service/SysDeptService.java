@@ -55,9 +55,6 @@ public class SysDeptService {
         }
         SysDept before = sysDeptMapper.selectByPrimaryKey(param.getId());
         Preconditions.checkNotNull(before, "待更新的部门不存在");
-        if (checkExist(param.getParentId(), param.getName(), param.getId())) {
-            throw new ParamException("同一层级下存在相同名称的部门");
-        }
 
         SysDept after = SysDept.builder().id(param.getId()).name(param.getName()).parentId(param.getParentId())
                 .seq(param.getSeq()).remark(param.getRemark())

@@ -2,6 +2,7 @@ package com.sjw.permission.common;
 
 import com.sjw.permission.modules.sys.util.JsonMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -9,7 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
+/**
+ * @author sjw
+ */
 @Slf4j
+@Configuration
 public class HttpInterceptor extends HandlerInterceptorAdapter {
 
     private static final String START_TIME = "requestStartTime";
