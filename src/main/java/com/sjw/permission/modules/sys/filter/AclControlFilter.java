@@ -49,20 +49,24 @@ public class AclControlFilter implements Filter {
 
         if (exclusionUrlSet.contains(servletPath)) {
             filterChain.doFilter(servletRequest, servletResponse);
+            return;
         }
 
         SysUser sysUser = RequestHolder.getCurrentUser();
         if (sysUser == null) {
             log.info("someone visit {}, but no login, parameter:{}", servletPath, JsonMapper.obj2String(requestMap));
             noAuth(request, response);
+            return;
         }
         SysCoreService sysCoreService = ApplicationContextHelper.popBean(SysCoreService.class);
         if (!sysCoreService.hasUrlAcl(servletPath)) {
             log.info("{} visit {}, but no login, parameter:{}", JsonMapper.obj2String(sysUser), servletPath, JsonMapper.obj2String(requestMap));
             noAuth(request, response);
+            return;
         }
 
         filterChain.doFilter(servletRequest, servletResponse);
+        return;
     }
 
     private void noAuth(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -71,8 +75,10 @@ public class AclControlFilter implements Filter {
             JsonData jsonData = JsonData.fail("没有访问权限，如需要访问，请联系管理员");
             response.setHeader("Content-Type", "application/json");
             response.getWriter().print(JsonMapper.obj2String(jsonData));
+            return;
         } else {
             clientRedirect(NO_AUTH_URL, response);
+            return;
         }
     }
 
