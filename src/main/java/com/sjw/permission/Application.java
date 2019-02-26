@@ -10,7 +10,8 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan(basePackages = {"com.sjw.permission.modules.*.dao","com.sjw.permission.modules.*.mapper"})
+@MapperScan(basePackages = {"com.sjw.permission.modules.sys.dao","com.sjw.permission.modules.sys.mapper"})
+
 public class Application {
 
     public static void main(String[] args) {
