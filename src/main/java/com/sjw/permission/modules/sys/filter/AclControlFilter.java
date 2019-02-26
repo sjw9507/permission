@@ -11,6 +11,8 @@ import com.sjw.permission.modules.sys.util.JsonMapper;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -22,6 +24,8 @@ import java.util.Set;
  * @author sjw
  */
 @Slf4j
+@WebFilter(urlPatterns = {"/sys/*", "/admin/*"}, filterName = "aclControlFilter"
+        ,initParams = {@WebInitParam(name = "exclusionUrls", value = "/sys/user/noAuth.page,/login.page")})
 public class AclControlFilter implements Filter {
 
     private static Set<String> exclusionUrlSet = Sets.newConcurrentHashSet();
