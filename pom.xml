@@ -139,14 +139,14 @@
     </dependencies>
     <build>
         <resources>
-            <resource>
-                <!-- 把webapp放到META-INF/resources -->
+            <!--<resource>
+                &lt;!&ndash; 把webapp放到META-INF/resources &ndash;&gt;
                 <directory>src/main/webapp</directory>
                 <targetPath>META-INF/resources</targetPath>
                 <includes>
                     <include>**/**</include>
                 </includes>
-            </resource>
+            </resource>-->
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
