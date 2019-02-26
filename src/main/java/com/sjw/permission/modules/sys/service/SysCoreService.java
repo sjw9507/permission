@@ -63,10 +63,7 @@ public class SysCoreService {
         // 这里是我自己定义了一个假的超级管理员规则，实际中要根据项目进行修改
         // 可以是配置文件获取，可以指定某个用户，也可以指定某个角色
         SysUser sysUser = RequestHolder.getCurrentUser();
-        if (sysUser.getMail().contains("admin")) {
-            return true;
-        }
-        return false;
+        return sysUser.getMail().contains("admin");
     }
 
     public boolean hasUrlAcl(String url) {
@@ -85,7 +82,8 @@ public class SysCoreService {
         // 规则：只要有一个权限点有权限，那么我们就认为有访问权限
         for (SysAcl acl : aclList) {
             // 判断一个用户是否具有某个权限点的访问权限
-            if (acl == null || acl.getStatus() != 1) { // 权限点无效
+            if (acl == null || acl.getStatus() != 1) {
+                // 权限点无效
                 continue;
             }
             hasValidAcl = true;
@@ -93,10 +91,7 @@ public class SysCoreService {
                 return true;
             }
         }
-        if (!hasValidAcl) {
-            return true;
-        }
-        return false;
+        return !hasValidAcl;
     }
 
     public List<SysAcl> getCurrentUserAclListFromCache() {
