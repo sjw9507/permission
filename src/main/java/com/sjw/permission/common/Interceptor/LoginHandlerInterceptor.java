@@ -9,17 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author 87112
+ * @author sjw
  * @date 2019/2/27
  */
-public class LoginHanderInterceptor implements HandlerInterceptor {
+public class LoginHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        SysUser sysUser = (SysUser)request.getSession().getAttribute("user");
+        SysUser sysUser = (SysUser) request.getSession().getAttribute("user");
         if (sysUser == null) {
-            String path = "/signin.jsp";
-            response.sendRedirect(path);
-            return true;
+            response.sendRedirect("/signin.jsp");
+            return false;
         }
         RequestHolder.add(sysUser);
         RequestHolder.add(request);

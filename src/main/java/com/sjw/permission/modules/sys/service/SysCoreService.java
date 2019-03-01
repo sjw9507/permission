@@ -76,7 +76,7 @@ public class SysCoreService {
         }
 
         List<SysAcl> userAclList = getCurrentUserAclListFromCache();
-        Set<Integer> userAclIdSet = userAclList.stream().map(acl -> acl.getId()).collect(Collectors.toSet());
+        Set<Integer> userAclIdSet = userAclList.stream().map(SysAcl::getId).collect(Collectors.toSet());
 
         boolean hasValidAcl = false;
         // 规则：只要有一个权限点有权限，那么我们就认为有访问权限
