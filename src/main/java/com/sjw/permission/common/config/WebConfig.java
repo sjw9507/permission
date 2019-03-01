@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * WebMvc配置
- *
+ *springboot
  * @author sjw
  */
 @Configuration
@@ -17,12 +17,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/src/main/webapp/WEB-INF/**").addResourceLocations("classpath:/WEB-INF/");
+        registry.addResourceHandler("/src/main/webapp/**").addResourceLocations("classpath:/webapp/");
     }
 
     @Override
     public  void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/sys/*","/admin/*");
-        registry.addInterceptor(new AclControlInterceptor()).addPathPatterns("/sys/*","/admin/*").excludePathPatterns("/sys/user/noAuth.page","/login.page");
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/sys/**","/admin/**");
+        registry.addInterceptor(new AclControlInterceptor()).addPathPatterns("/sys/**","/admin/**").excludePathPatterns("/sys/user/noAuth.page","/login.page");
     }
 }
