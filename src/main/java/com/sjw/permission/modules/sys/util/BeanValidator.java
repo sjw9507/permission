@@ -35,6 +35,7 @@ public class BeanValidator {
         }
     }
 
+    @SuppressWarnings("all")
     private static Map<String, String> validateList(Collection<?> collection) {
         Preconditions.checkNotNull(collection);
         Iterator iterator = collection.iterator();
@@ -51,6 +52,7 @@ public class BeanValidator {
         return errors;
     }
 
+    @SuppressWarnings("all")
     private static Map<String, String> validateObject(Object first, Object... objects) {
         if (objects != null && objects.length > 0) {
             return validateList(Lists.asList(first, objects));
