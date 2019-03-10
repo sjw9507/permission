@@ -1,4 +1,4 @@
-package com.sjw.permission.common.Interceptor;
+package com.sjw.permission.common.interceptor;
 
 import com.sjw.permission.common.RequestHolder;
 import com.sjw.permission.modules.sys.model.SysUser;

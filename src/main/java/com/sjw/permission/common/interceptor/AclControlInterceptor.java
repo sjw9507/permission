@@ -1,4 +1,4 @@
-package com.sjw.permission.common.Interceptor;
+package com.sjw.permission.common.interceptor;
 
 import com.sjw.permission.common.ApplicationContextHelper;
 import com.sjw.permission.common.JsonData;
