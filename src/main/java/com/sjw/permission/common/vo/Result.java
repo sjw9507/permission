@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @author sjw
  */
 @Api
+@SuppressWarnings("unchecked")
 public class Result<T> {
     @ApiModelProperty(value = "实际传输的数据")
     private T data;
